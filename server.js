@@ -4,7 +4,6 @@ const cors = require("cors");
 const professionalRouter = require("./src/routes/professionalsRouter");
 const contactsRouter = require("./src/routes/contactsRouter");
 const mongodb = require("./src/database/connect");
-app.use(cors());
 
 const port = process.env.PORT || 8080;
 
@@ -13,13 +12,14 @@ const port = process.env.PORT || 8080;
  * ************************/
 // Express Messages Middleware
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+app.use(cors());
 
 /* ***********************
  * Routes
  *************************/
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
 app.use("/professional", professionalRouter);
 app.use("/contacts", contactsRouter);
 
