@@ -10,7 +10,7 @@ const getProfessionals = async (req, res) => {
     .toArray()
     .then((professionals) => {
       res.setHeader("Content-Type", "application/json");
-      res.status(200).json(professionals);
+      res.status(200).json(professionals[0]);
     })
     .catch((err) => {
       res.setHeader("Content-Type", "application/json");
