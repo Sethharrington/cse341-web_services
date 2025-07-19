@@ -1,0 +1,8 @@
+// LOCALHOST
+### Get all professional
+GET http://localhost:8080/professional
+
+// PRODUCTION
+### Get all professional
+GET https://cse341-web-services-1qxq.onrender.com/professional
+
