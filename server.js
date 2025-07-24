@@ -16,7 +16,8 @@ const port = process.env.PORT || 8080;
 // Express Messages Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+const corsOptions = { origin: "*" };
+app.use(cors(corsOptions));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /* ***********************
