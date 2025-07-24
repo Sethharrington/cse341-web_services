@@ -5,9 +5,11 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "https://cse341-web-services-1qxq.onrender.com:8080",
+  "host": "https://cse341-web-services-1qxq.onrender.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -22,7 +24,9 @@
     "/professional/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -36,7 +40,9 @@
     "/contacts/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -48,7 +54,9 @@
       },
       "post": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -62,7 +70,9 @@
     "/contacts/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -82,7 +92,9 @@
       },
       "put": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -102,7 +114,9 @@
       },
       "delete": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
