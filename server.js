@@ -23,7 +23,15 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
  * Routes
  *************************/
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send(`
+    <h1>Welcome to the API</h1>
+    <p>Use the endpoints provided in the documentation to interact with the API.</p>
+    <ul>
+      <li><a href="/api-docs">API Documentation</a></li>
+      <li><a href="/professional">Professionals</a></li>
+      <li><a href="/contacts">Contacts</a></li>
+    </ul>
+  `);
 });
 app.use("/professional", professionalRouter);
 app.use("/contacts", contactsRouter);
@@ -37,7 +45,7 @@ mongodb.initDb((err) => {
   } else {
     app.listen(port, () => {
       console.log(
-        "Web Server is listening at port " + (process.env.PORT || 8080),
+        "Web Server is listening at port " + (process.env.PORT || 8080)
       );
     });
   }
